@@ -4,7 +4,7 @@ import util.parsing.input.CharSequenceReader
 object Main extends App with parsing.C_Parser {
   
   // Make some test inputs
-  val testInputs = Seq(
+  val testInputs = Seq (
     // Sum of 2 ints (expected: 6)
     new CharSequenceReader("5+1"),
     // Sum of multiple ints (expected: 15)
