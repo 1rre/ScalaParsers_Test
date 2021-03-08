@@ -39,11 +39,12 @@ object Main extends App with parsing.C_Parser {
             println(s"Parsed addition: $result")
             println(s"Sum is: ${result.toInt}")
             // Sorry about the nasty way of getting the extra input, it's not really meant to be printed
-            println(s"Unexpected extra: ${reader.source.subSequence(reader.offset,reader.source.length)}")
+            println(s"Unexpected `${reader.source.subSequence(reader.offset,reader.source.length)}`")
           // Otherwise print that it didn't contain a valid addition
-          case _ => println(s"${input.source} didn't contain a valid addition")
+          case _ => println(s"`${input.source}` didn't contain a valid addition")
         }
-        // Print the list & the sum of the list
+        // print an empty line as a separator
+        println
         
       }
   }
@@ -51,7 +52,6 @@ object Main extends App with parsing.C_Parser {
   
   println("Using the recursive method:")
   test(addition)
-  println
   println("Using the list method:")
   test(addition0)
   
